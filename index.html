@@ -91,7 +91,6 @@ button {
 <div id="menu">
   <h2>Vyber mód:</h2>
   <button onclick="startGame('misa')">Míša 💛</button>
-  <button onclick="startGame('misa2')">Míša (osek)💛</button>
   <button onclick="startGame('market')">Markét 💜</button>
   <button onclick="startGame('big')">Velká hra knížky 🔥</button>
   <button onclick="startGame('marketBig')">Velká hra knížky Markét 🔥</button>
@@ -101,6 +100,7 @@ button {
   <button onclick="startGame('got')">Hra o trůny </button>
   <button onclick="startGame('serial')">Seriály </button>
   <button onclick="startGame('LOTR')">LOTR </button>
+  <button onclick="startGame('MRVEL')">MARVEL </button>
 </div>
 
 <h2 id="roundInfo"></h2>
@@ -123,17 +123,6 @@ const characterSets = {
     "images/Liam.jpg","images/Lorcan.jpg","images/Lucien.jpg","images/Rhys.jpg",
     "images/Ridoc.jpg","images/Rolfe.jpg","images/Rowan.jpg","images/Ruhn.jpg",
     "images/Sam.jpg","images/Tamlin.jpg","images/Tharion.jpg","images/Xaden.jpg"
-  ],
-  
-  misa2: [
-    "images/Aedion.jpg","images/Aidas.jpg","images/Arobynn.jpg","images/Azriel.jpg",
-    "images/Baxian.jpg","images/Cardan.jpg","images/Carrion.jpg",
-    "images/Cormac.jpg","images/Declan.jpg","images/Dorian.jpg","images/Fenrys.jpg",
-    "images/Flynn.jpg","images/Gavriel.jpg","images/Chaol.jpg",
-    "images/Ithan.jpg","images/Kitt_Azer.jpg",
-    "images/Liam.jpg","images/Lorcan.jpg","images/Lucien.jpg",
-    "images/Ridoc.jpg","images/Rolfe.jpg","images/Ruhn.jpg",
-    "images/Sam.jpg","images/Tamlin.jpg","images/Tharion.jpg"
   ],
 
   market: [
@@ -253,7 +242,24 @@ const characterSets = {
 "images/Gloin.jpg","images/Bifur.jpg","images/Bombur.jpg","images/Beorn.jpg",
 "images/Azog.jpg","images/Bolg.jpg","images/Dain_Ironfoot.jpg","images/Bard.jpg",
 "images/Bilbo.jpg","images/Trolls.jpg"
+ ],
+
+ MARVEL:[
+ "images/AntMan.jpg","images/BlackPanter.jpg","images/BlackWidow.jpg","images/CaptainAmerica.jpg",
+"images/CaptainMarvel.jpg","images/Deadpool.jpg","images/Destroyer.jpg","images/DoctorStrange.jpg",
+"images/Drax.jpg","images/Falcon.jpg","images/Gamora.jpg","images/Groot.jpg",
+"images/Groot2.jpg","images/Happy.jpg","images/Hawkeye.jpg","images/Heimdall.jpg",
+"images/Hela.jpg","images/Hulk.jpg","images/IronMan.jpg","images/Loki.jpg",
+"images/Mantis.jpg","images/Nebula.jpg","images/NickFury.jpg","images/Odin.jpg",
+"images/Quicksilver.jpg","images/Rocket.jpg","images/ScarletWitch.jpg","images/Shuri.jpg",
+"images/SpiderMan1.jpg","images/SpiderMan2.jpg","images/SpiderMan3.jpg","images/StarLord.jpg",
+"images/Thor.jpg","images/Valkyrie.jpg","images/Vision.jpg","images/WarMachine.jpg",
+"images/Wasp.jpg","images/WinterSoldier.jpg","images/YonDu.jpg","images/Pepper.jpg",
+"images/Mystique.jpg","images/Wolverine.jpg","images/ProfesorX.jpg","images/Magneto.jpg",
+"images/Storm.jpg","images/JeanGrey.jpg","images/Cyclops.jpg","images/DogPool.jpg",
+"images/Elektra.jpg","images/Blade.jpg","images/ShangChi.jpg","images/Venom.jpg"
  ]
+
 };
 
 // ===== GAME STATE =====
