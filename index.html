@@ -89,20 +89,12 @@ button {
 <h1>Koho radši 😏</h1>
 
 <div id="menu">
-  <h2>Vyber mód:</h2>
-  <button onclick="startGame('misa')">Míša 💛</button>
-  <button onclick="startGame('misa2')">Míša (ořez) 💛</button>
-  <button onclick="startGame('market')">Markét 💜</button>
-  <button onclick="startGame('big')">Velká hra knížky 🔥</button>
-  <button onclick="startGame('marketBig')">Velká hra knížky Markét 🔥</button>
-  <button onclick="startGame('girls')">Holky knížky 👑</button>
-  <button onclick="startGame('teenwolf')">TeenWolf 🐺</button>
-  <button onclick="startGame('tvd')">Deníky 🧛</button>
-  <button onclick="startGame('got')">Hra o trůny </button>
-  <button onclick="startGame('serial')">Seriály </button>
-  <button onclick="startGame('LOTR')">LOTR </button>
-  <button onclick="startGame('MARVEL')">MARVEL </button>
+  <h2>Vyber kategorii:</h2>
+  <button onclick="showBooksMenu()">Knížky 📚</button>
+  <button onclick="showMoviesMenu()">Filmy / Seriály 🎬</button>
 </div>
+
+<div id="subMenu" style="display:none;"></div>
 
 <h2 id="roundInfo"></h2>
 
@@ -286,6 +278,57 @@ function shuffle(array){
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
+}
+
+
+function showBooksMenu(){
+
+  document.getElementById("menu").style.display = "none";
+
+  const subMenu = document.getElementById("subMenu");
+
+  subMenu.innerHTML = `
+    <h2>Knížky 📚</h2>
+
+    <button onclick="startGame('misa')">Míša 💛</button>
+    <button onclick="startGame('misa2')">Míša (ořez) 💛</button>
+    <button onclick="startGame('market')">Markét 💜</button>
+    <button onclick="startGame('big')">Velká hra knížky 🔥</button>
+    <button onclick="startGame('marketBig')">Velká hra knížky Markét 🔥</button>
+    <button onclick="startGame('girls')">Holky knížky 👑</button>
+
+    <br><br>
+    <button onclick="backToMain()">⬅ Zpět</button>
+  `;
+
+  subMenu.style.display = "block";
+}
+
+function showMoviesMenu(){
+
+  document.getElementById("menu").style.display = "none";
+
+  const subMenu = document.getElementById("subMenu");
+
+  subMenu.innerHTML = `
+    <h2>Filmy / Seriály 🎬</h2>
+
+    <button onclick="startGame('teenwolf')">TeenWolf 🐺</button>
+    <button onclick="startGame('tvd')">Deníky 🧛</button>
+    <button onclick="startGame('got')">Hra o trůny 👑</button>
+    <button onclick="startGame('serial')">Seriály 📺</button>
+    <button onclick="startGame('LOTR')">LOTR 💍</button>
+    <button onclick="startGame('MARVEL')">MARVEL 🦸</button>
+
+    <br><br>
+    <button onclick="backToMain()">⬅ Zpět</button>
+  `;
+
+  subMenu.style.display = "block";
+}
+
+function backToMain(){
+  location.reload();
 }
 
 // ===== START GAME =====
